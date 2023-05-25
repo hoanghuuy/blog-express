@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/public/app.js",
+  "scripts": {
+    "start": "nodemon src/public/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoanghuuy/blog-express.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "nodejs",
+    "study",
+    "back-end"
+  ],
+  "author": "HuyHoang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoanghuuy/blog-express/issues"
+  },
+  "homepage": "https://github.com/hoanghuuy/blog-express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
