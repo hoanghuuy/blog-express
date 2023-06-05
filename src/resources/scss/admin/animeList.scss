@@ -1,0 +1,35 @@
+#admin-list-page .body-page {
+  .admin-anime-table tr {
+    .anime-image-col {
+      width: 135px;
+      height: 195px;
+      padding: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .title {
+      width: 100px;
+    }
+
+    .action {
+      width: 100px;
+      text-align: center;
+      span {
+        display: inline-block;
+
+        &:hover {
+          border-bottom: 1px solid #666;
+        }
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

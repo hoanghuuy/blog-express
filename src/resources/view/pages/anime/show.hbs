@@ -1,0 +1,60 @@
+<div id="anime-page" class="page mt-3">
+  {{!-- <div class="page-heading">
+    <h1 class="page-title">
+      {{#with anime}}
+        {{this.title}}
+      {{/with}}
+    </h1>
+  </div> --}}
+
+  <div class="body-page mt-3">
+    <div class="row gy-5">
+      <div class="col-lg-9">
+        {{#with anime}}
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item">Anime</li>
+              <li
+                class="breadcrumb-item active"
+                aria-current="page"
+              >{{this.title}}</li>
+            </ol>
+          </nav>
+
+          <div class="post p-4">
+            <div class="background">
+              <img src="{{this.background}}" alt="background" />
+              <div class="black-out"></div>
+            </div>
+            <div class="post-content">
+              <div class="anime-thumbnail">
+                <img src="{{this.thumbnail}}" alt="ani-img" />
+                <div class="black-out">
+                  <img src="/img/icons/play.png" alt="play-button" />
+                </div>
+              </div>
+              <h1 class="title">{{this.title}}</h1>
+              <div class="description">
+                {{this.description}}
+              </div>
+            </div>
+          </div>
+        {{/with}}
+      </div>
+
+      <div class="sidebar col-lg-3">
+        <div class="sidebar-group" id="popular-anime-sidebar">
+          <h3 class="title">
+            Anime mới cập nhập
+          </h3>
+          {{! <div class="list-group">
+            <a href="#" cl  ass="list-group-item list-group-item-action">
+              One Piece 
+            </a>
+          </div> }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

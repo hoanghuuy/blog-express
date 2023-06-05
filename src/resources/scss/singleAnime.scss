@@ -1,0 +1,74 @@
+#anime-page .body-page {
+  .post {
+    position: relative;
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .post-content {
+      padding-left: 200px;
+      position: relative;
+      height: 260px;
+
+      .title {
+        color: #2ecc71;
+        cursor: pointer;
+
+        &:hover {
+          color: #27ae60;
+        }
+      }
+
+      .description {
+        color: #fff;
+      }
+
+      .anime-thumbnail {
+        position: absolute;
+        width: 180px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .black-out {
+          display: none;
+          background: rgba($color: #000000, $alpha: 0.4);
+          text-align: center;
+          padding-top: 40%;
+
+          img {
+            width: 40%;
+          }
+        }
+
+        &:hover .black-out {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // .sidebar {
+  //   .title {
+  //     font-size: 16px;
+  //   }
+  // }
+}

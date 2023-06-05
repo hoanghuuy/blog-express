@@ -1,0 +1,57 @@
+<div id="admin-list-page" class="page mt-3">
+
+  {{! breadcrumb }}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page">
+        <a href="/admin">&#8920; Admin</a>
+      </li>
+    </ol>
+  </nav>
+
+  {{! heading }}
+  <div class="page-heading d-flex justify-content-between">
+    {{! title }}
+    <h1 class="page-title">List</h1>
+
+    {{! directive action }}
+    <a href="/admin/create">
+      <button type="submit" class="btn btn-secondary">Thêm Anime</button>
+    </a>
+  </div>
+
+  {{! body }}
+  <div class="body-page mt-3">
+    <table class="admin-anime-table table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"></th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th class="text-center" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each anime}}
+          <tr>
+            <td>{{sum @index 1}}</td>
+            <td class="anime-image-col">
+              <img src="{{this.thumbnail}}" alt="thumbnail" />
+            </td>
+            <td class="title">{{this.title}}</td>
+            <td class="description">{{this.description}}</td>
+            <td class="action">
+              <span class="pencil">
+                <a href="/admin/edit/{{this.slug}}">✎</a>
+              </span>
+              <span class="delete">
+                <a href="admin/delete{{this._id}}">🗑</a>
+              </span>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

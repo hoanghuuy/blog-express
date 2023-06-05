@@ -1,0 +1,42 @@
+<div id="home-page" class="page mt-3">
+  <div class="page-heading d-flex justify-content-between">
+    {{! title }}
+    <h1 class="page-title">Home page</h1>
+
+    {{! search }}
+    <a href="/search">
+      <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </a>
+  </div>
+
+  <div class="body-page mt-3">
+    <div class="row gx-5 gy-5">
+      {{#each anime}}
+        <div class="col-lg-6 col-sm-4">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <a href="/anime/{{this.slug}}">
+                  <img
+                    src={{this.thumbnail}}
+                    class="img-fluid rounded-start"
+                    alt="anime-img"
+                  /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <a href="/anime/{{this.slug}}">
+                    <h5 class="card-title">{{this.title}}</h5>
+                  </a>
+                  <p class="card-text">{{this.description}}</p>
+                  {{! <p class="card-text"><small class="text-body-secondary">Last
+                      updated 3 mins ago</small></p> }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div id="admin-create-page" class="page mt-3">
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page">
+        <a href="/admin/list">&#8920; List</a>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="page-heading">
+    <h1 class="page-title">Create page</h1>
+  </div>
+
+  <div class="body-page mt-3">
+    {{#with anime}}
+      <form method="POST" action="/admin/update/{{this._id}}?_method=PUT">
+        <div class="form-group mt-3">
+          <label for="title">Tên phim</label>
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="title"
+            placeholder="Nhập tên phim..."
+            name="title"
+            value="{{this.title}}"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="description">Mô tả phim</label>
+          <textarea
+            class="form-control mt-2"
+            id="description"
+            rows="3"
+            placeholder="Mô tả phim..."
+            name="description"
+          >{{this.description}}</textarea>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="thumbnail">Link thumbnail</label>
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="thumbnail"
+            placeholder="Link thumbnail..."
+            name="thumbnail"
+            value="{{this.thumbnail}}"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="background">Link ảnh nền</label>
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="background"
+            placeholder="Link ảnh nền..."
+            name="background"
+            value="{{this.background}}"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="slug">Slug</label>
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="slug"
+            placeholder="Link ảnh nền..."
+            name="slug"
+            value="{{this.slug}}"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Thêm</button>
+      </form>
+    {{/with}}
+  </div>
+</div>
